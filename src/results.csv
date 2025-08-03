@@ -1,0 +1,151 @@
+question,response,context,BLUE,bert_P,bert_R,bert_F1,rouge1,faith_label,faith_score,latency
+What is Acne?,"Hello! I'm here to help answer your question. Based on the context provided, acne is a skin condition that occurs when the pores or hair follicles become blocked, causing small swellings to develop on the skin surface. These swellings can become inflamed, leading to the formation of pimples and cysts on the face, neck, shoulders, and upper back. Acne is caused by a combination of factors, including excess oil production, clogged pores, and bacterial infection. Isotretinoin (Accutane) is a prescription medication that is used to treat very severe, disfiguring acne.","GALE ENCYCLOPEDIA OF MEDICINE 2 25
+Acne
+Acne vulgaris affecting a woman’s face. Acne is the general
+name given to a skin disorder in which the sebaceous
+glands become inflamed. (Photograph by Biophoto Associ-
+ates, Photo Researchers, Inc. Reproduced by permission.)
+GEM - 0001 to 0432 - A  10/22/03 1:41 PM  Page 25 Isotretinoin (Accutane) is prescribed only for very
+severe, disfiguring acne.
+Acne is a skin condition that occurs when pores or
+hair follicles become blocked. This allows a waxy
+material, sebum, to collect inside the pores or follicles.
+Normally, sebum flows out onto the skin and hair to
+form a protective coating, but when it cannot get out,
+small swellings develop on the skin surface. Bacteria
+and dead skin cells can also collect that can cause
+inflammation. Swellings that are small and not KEY TERMS
+Acne—A skin condition in which raised bumps,
+pimples, and cysts form on the face, neck, shoul-
+ders and upper back.
+Bacteria—Tiny, one-celled forms of life that cause
+many diseases and infections.
+Bowel—The intestine; a tube-like structure that
+extends from the stomach to the anus. Some diges-
+tive processes are carried out in the bowel before
+food passes out of the body as waste.
+Cyst—An abnormal sac or enclosed cavity in the
+body, filled with liquid or partially solid material.",9.100173097369627,0.7683473229408264,0.6764193773269653,0.7194586992263794,0.3936507936507937,entailment,0.7437927722930908,156.29051542282104
+What are the symptoms of diabetes?,"As a helpful medical assistant, I can answer your question based on the context provided. Type I diabetes mellitus is characterized by high blood sugar levels (hyperglycemia) and fatigue, while amyotrophic lateral sclerosis (ALS) is a progressive neurological disease that affects muscle function and can cause stumbling, difficulty climbing stairs, and weakness in the hands.
+The symptoms of diabetes mellitus include:
+1. Frequent urination due to high blood sugar levels
+2. Increased thirst and hunger
+3. Blurred vision
+4. Fatigue
+5. Cuts or bruises that are slow to heal
+6. Recurring skin, gum, or bladder infections
+7. Flu-like symptoms (tiredness, weakness, and dizziness)
+8. Numbness or tingling in the hands and feet
+
+The symptoms of amyotrophic lateral sclerosis include:
+1. Muscle twitching or cramping
+2. Difficulty walking or running","• Type I diabetes mellitus. Characterized by fatigue and
+an abnormally high level of glucose in the blood
+(hyperglycemia).
+• Amyotrophic lateral schlerosis. First signs are stum-
+bling and difficulty climbing stairs. Later, muscle
+cramps and twitching may be observed as well as
+weakness in the hands making fastening buttons or
+turning a key difficult. Speech may become slowed or
+slurred. There may also be difficluty swallowing. As
+respiratory muscles atrophy, there is increased danger begin to fall. A person with diabetes mellitus either does
+not make enough insulin, or makes insulin that does not
+work properly. The result is blood sugar that remains
+high, a condition called hyperglycemia.
+Diabetes must be diagnosed as early as possible. If
+left untreated, it can damage or cause failure of the eyes,
+kidneys, nerves, heart, blood vessels, and other body
+organs. Hypoglycemia, or low blood sugar, may also be
+discovered through blood sugar testing. Hypoglycemia is Resources
+BOOKS
+A Manual of Laboratory and Diagnostic Tests.5th ed. Ed.
+Francis Fishback. Philadelphia: Lippincott, 1996.
+Henry, John B., ed. Clinical Diagnosis and Management by
+Laboratory Methods. 19th ed. Philadelphia: W. B. Saun-
+ders Co., 1996.
+PERIODICALS
+American Diabetes Association. “Report of the Expert Com-
+mittee on the Diagnosis and Classification of Diabetes
+Mellitus.” Diabetes Care 20, no, 7(July 997): 1183-1197.
+ORGANIZATIONS",3.5892205683974443,0.6989654302597046,0.646352231502533,0.6716300845146179,0.3699421965317919,entailment,0.7890252470970154,192.68010926246643
+What causes high blood pressure?,"High blood pressure, also known as hypertension, can be caused by a variety of factors. Here are some of the main causes:
+1. Arteriosclerosis (hardening of the arteries): Over time, the inner lining of your blood vessels can become less flexible and more prone to buildup of plaque, which can narrow the passages and increase blood pressure.
+2. Poor diet: Consuming foods that are high in sodium, processed meats, and added sugars can contribute to high blood pressure.
+3. Lack of physical activity: Not getting enough exercise or being overweight or obese can increase your risk of developing hypertension.
+4. Smoking: Smoking can damage the inner lining of your blood vessels, leading to hypertension and increasing the risk of heart disease.
+5. Stress: Chronic stress can increase your blood pressure and contribute to other health problems.
+6. Sleep apnea: This condition, in which a person stops breathing for short periods during sleep, can lead to high blood pressure and other health issues.
+7. Underlying medical conditions: Certain medical conditions, such as kidney disease, ad","(BPH), a condition that affects men and is characterized
+by an enlarged prostate gland.
+High blood pressure
+High blood pressure puts a strain on the heart and
+the arteries. Over time, hypertension can damage the
+blood vessels to the point of causing stroke, heart fail-
+ure or kidney failure. People with high blood pressure
+may also be at higher risk for heart attacks. Controlling
+high blood pressure makes these problems less likely.
+Alpha blockers help lower blood pressure by causing health problems that high blood pressure can cause,
+patients may have to take medicine for the rest of their
+lives. Furthermore, medicine alone may not be enough.
+Patients with high blood pressure may also need to avoid
+certain foods and keep their weight under control. The
+health care professional who is treating the condition can
+offer advice on what measures may be necessary.
+Patients being treated for high blood pressure should not
+change their diets without consulting their physicians. heart and lungs.
+• Seek treatment for hypertension—High blood pressure
+can be controlled through lifestyle changes—reducing
+sodium and fat, exercising, managing stress, quitting
+KEY TERMS
+Arteriosclerosis —Hardening of the arteries. It
+includes atherosclerosis, but the two terms are
+often used synonymously.
+Cholesterol—A fat-like substance that is made by
+the human body and eaten in animal products.
+Cholesterol is used to form cell membranes and
+process hormones and vitamin D. High choles-",3.217928316489816,0.7056553959846497,0.6897179484367371,0.6975956559181213,0.38820638820638825,neutral,0.8007773756980896,177.10974407196045
+How is asthma diagnosed?,"Based on the context provided, asthma can be diagnosed through various methods, including:
+1. Skin prick test or blood test: These tests can determine if a person has an allergic reaction to certain allergens, which may contribute to asthma.
+2. Spirometry: This involves measuring how much air a person can exhale from their lungs and can help detect any narrowing of the airways.
+3. Methacholine challenge test: This test involves inhaling a small amount of methacholine, which can cause airway constriction in people with asthma. The test can help determine the severity of asthma and the effectiveness of treatment.","patients, and they may sometimes be the sole cause of
+symptoms. They are:
+GALE ENCYCLOPEDIA OF MEDICINE 2380
+Asthma
+GEM - 0001 to 0432 - A  10/22/03 1:43 PM  Page 380 GALE ENCYCLOPEDIA OF MEDICINE 2 379
+Asthma
+GEM - 0001 to 0432 - A  10/22/03 1:43 PM  Page 379 although an allergic skin response does not always mean
+that the allergen being tested is causing the asthma. Also,
+the body’s immune system produces antibody to fight off
+the allergen, and the amount of antibody can be mea-
+sured by a blood test. This will show how sensitive the
+patient is to a particular allergen. If the diagnosis is still
+in doubt, the patient can inhale a suspect allergen while
+using a spirometer to detect airway narrowing. Spirome-",1.567333389940286,0.7077844142913818,0.6283334493637085,0.6656966805458069,0.3652173913043478,neutral,0.7726927399635315,121.10133624076843
+What are the early signs of Alzheimer’s disease?,"Based on the provided context, the early signs of Alzheimer's disease include:
+* Memory loss that affects job skills or daily activities
+* Difficulty performing familiar tasks, such as cooking or managing finances
+* Problems with language, including trouble finding the right words or understanding what others are saying
+* Disorientation of time and place, such as forgetting the date or where they are
+* Poor or decreased judgment, leading to risky behavior or decisions
+* Difficulty with abstract thinking, such as problem-solving or decision-making
+* Misplacing things, including valuables or important documents.","severe problems with eating, communicating, and con-
+trolling their bladder and bowel functions.
+The Alzheimer’s Association has developed a list of ten
+warning signs of AD. A person with several of these symp-
+toms should see a physician for a thorough evaluation:
+• memory loss that affects job skills
+• difficulty performing familiar tasks
+• problems with language
+• disorientation of time and place
+• poor or decreased judgment
+• problems with abstract thinking
+• misplacing things Causes
+The cause or causes of Alzheimer’s disease are
+unknown. Some strong leads have been found through
+recent research, however, and these have also given some
+theoretical support to several new experimental treatments.
+GALE ENCYCLOPEDIA OF MEDICINE 2134
+Alzheimer’s disease
+GEM - 0001 to 0432 - A  10/22/03 1:42 PM  Page 134 GALE ENCYCLOPEDIA OF MEDICINE 2136
+Alzheimer’s disease
+GEM - 0001 to 0432 - A  10/22/03 1:42 PM  Page 136",5.492987840345735,0.6777099967002869,0.5877025723457336,0.6295052170753479,0.3305084745762712,entailment,0.5624399781227112,126.81941843032837
