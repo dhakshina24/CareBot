@@ -30,8 +30,8 @@ CareBot is a Retrieval-Augmented Generation (RAG) chatbot designed to answer med
 
 ## Streamlit App Screenshots
 <p float="left">
-  <img src="images/chatbot_1.png" width="600" style="margin-right: 10px;"/>
-  <img src="images/chatbot_2.png" width="600"/>
+  <img src="images/chatbot_1.png" width="300" style="margin-right: 10px;"/>
+  <img src="images/chatbot_2.png" width="300"/>
 </p>
 
 ## Setup & Run
