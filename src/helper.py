@@ -2,21 +2,28 @@ from langchain.document_loaders import PyPDFLoader, DirectoryLoader
 from langchain.schema import Document
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
+import os
 
 
 
 # Extract text from PDF files
 def load_pdf_files(data):
-  loader = DirectoryLoader(
-    # Data Location
-    data,
-    glob="*.pdf",
-    loader_cls=PyPDFLoader
-  )
-
-  documents = loader.load()
-
-  return documents
+  try:
+    # Check if the data directory exists
+    if not os.path.exists(data):
+      raise ValueError(f"Data directory {data} does not exist.")
+    else:
+      loader = DirectoryLoader(
+          # Data Location
+          data,
+          glob="*.pdf",
+          loader_cls=PyPDFLoader
+      )
+      documents = loader.load()
+      return documents
+  except Exception as e:
+    print(f"Error loading PDF files: {e}")
+    return []
 
 
 # Filter documents to retain only minimal metadata
@@ -59,9 +66,12 @@ def download_embeddings():
   """
   Download and return the HuggingFace emebddings model.
   """
-
-  model_name = "sentence-transformers/all-MiniLM-L6-v1"
-  embeddings = HuggingFaceEmbeddings(
-    model_name = model_name
-  )
-  return embeddings
+  try: 
+    model_name = "sentence-transformers/all-MiniLM-L6-v1"
+    embeddings = HuggingFaceEmbeddings(
+      model_name = model_name
+    )
+    return embeddings
+  except Exception as e:
+    print(f"Error downloading embeddings: {e}")
+    return None
