@@ -40,10 +40,10 @@ docsearch = PineconeVectorStore.from_existing_index(
 )
 
 # Define retriever for retrieving docs from VectorDB
-retriever = docsearch.as_retriever(search_type='similarity', search_kwargs={'k': 1})
+retriever = docsearch.as_retriever(search_type='similarity', search_kwargs={'k': 3})
 
 # Define LLM - Quantized Llama-2
-config = {'max_new_tokens': 256, 'context_length': 1024, 'temperature': 0.8, 'threads': 4}
+config = {'max_new_tokens': 256, 'context_length': 1024, 'temperature': 0.7, 'threads': 4}
 llm = CTransformers(model= "../models/llama-2-7b-chat.Q3_K_S.gguf", model_file="llama-2-7b-chat.Q3_K_S.gguf", model_type="llama", config=config)
 
 # Prompt Template
@@ -81,4 +81,4 @@ def get_response():
     return jsonify({"response": f"Error: {str(e)}"}), 500
 
 if __name__=="__main__":
-  app.run(debug=False, port=5000)
+  app.run(debug=True, port=5000)

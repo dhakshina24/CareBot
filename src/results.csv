@@ -1,151 +1,297 @@
-question,response,context,BLUE,bert_P,bert_R,bert_F1,rouge1,faith_label,faith_score,latency
-What is Acne?,"Hello! I'm here to help answer your question. Based on the context provided, acne is a skin condition that occurs when the pores or hair follicles become blocked, causing small swellings to develop on the skin surface. These swellings can become inflamed, leading to the formation of pimples and cysts on the face, neck, shoulders, and upper back. Acne is caused by a combination of factors, including excess oil production, clogged pores, and bacterial infection. Isotretinoin (Accutane) is a prescription medication that is used to treat very severe, disfiguring acne.","GALE ENCYCLOPEDIA OF MEDICINE 2 25
-Acne
-Acne vulgaris affecting a woman’s face. Acne is the general
-name given to a skin disorder in which the sebaceous
-glands become inflamed. (Photograph by Biophoto Associ-
-ates, Photo Researchers, Inc. Reproduced by permission.)
-GEM - 0001 to 0432 - A  10/22/03 1:41 PM  Page 25 Isotretinoin (Accutane) is prescribed only for very
-severe, disfiguring acne.
-Acne is a skin condition that occurs when pores or
-hair follicles become blocked. This allows a waxy
-material, sebum, to collect inside the pores or follicles.
-Normally, sebum flows out onto the skin and hair to
-form a protective coating, but when it cannot get out,
-small swellings develop on the skin surface. Bacteria
-and dead skin cells can also collect that can cause
-inflammation. Swellings that are small and not KEY TERMS
-Acne—A skin condition in which raised bumps,
-pimples, and cysts form on the face, neck, shoul-
-ders and upper back.
-Bacteria—Tiny, one-celled forms of life that cause
-many diseases and infections.
-Bowel—The intestine; a tube-like structure that
-extends from the stomach to the anus. Some diges-
-tive processes are carried out in the bowel before
-food passes out of the body as waste.
-Cyst—An abnormal sac or enclosed cavity in the
-body, filled with liquid or partially solid material.",9.100173097369627,0.7683473229408264,0.6764193773269653,0.7194586992263794,0.3936507936507937,entailment,0.7437927722930908,156.29051542282104
-What are the symptoms of diabetes?,"As a helpful medical assistant, I can answer your question based on the context provided. Type I diabetes mellitus is characterized by high blood sugar levels (hyperglycemia) and fatigue, while amyotrophic lateral sclerosis (ALS) is a progressive neurological disease that affects muscle function and can cause stumbling, difficulty climbing stairs, and weakness in the hands.
-The symptoms of diabetes mellitus include:
-1. Frequent urination due to high blood sugar levels
-2. Increased thirst and hunger
-3. Blurred vision
-4. Fatigue
-5. Cuts or bruises that are slow to heal
-6. Recurring skin, gum, or bladder infections
-7. Flu-like symptoms (tiredness, weakness, and dizziness)
-8. Numbness or tingling in the hands and feet
-
-The symptoms of amyotrophic lateral sclerosis include:
-1. Muscle twitching or cramping
-2. Difficulty walking or running","• Type I diabetes mellitus. Characterized by fatigue and
-an abnormally high level of glucose in the blood
-(hyperglycemia).
-• Amyotrophic lateral schlerosis. First signs are stum-
-bling and difficulty climbing stairs. Later, muscle
-cramps and twitching may be observed as well as
-weakness in the hands making fastening buttons or
-turning a key difficult. Speech may become slowed or
-slurred. There may also be difficluty swallowing. As
-respiratory muscles atrophy, there is increased danger begin to fall. A person with diabetes mellitus either does
-not make enough insulin, or makes insulin that does not
-work properly. The result is blood sugar that remains
-high, a condition called hyperglycemia.
-Diabetes must be diagnosed as early as possible. If
-left untreated, it can damage or cause failure of the eyes,
-kidneys, nerves, heart, blood vessels, and other body
-organs. Hypoglycemia, or low blood sugar, may also be
-discovered through blood sugar testing. Hypoglycemia is Resources
-BOOKS
-A Manual of Laboratory and Diagnostic Tests.5th ed. Ed.
-Francis Fishback. Philadelphia: Lippincott, 1996.
-Henry, John B., ed. Clinical Diagnosis and Management by
-Laboratory Methods. 19th ed. Philadelphia: W. B. Saun-
-ders Co., 1996.
-PERIODICALS
-American Diabetes Association. “Report of the Expert Com-
-mittee on the Diagnosis and Classification of Diabetes
-Mellitus.” Diabetes Care 20, no, 7(July 997): 1183-1197.
-ORGANIZATIONS",3.5892205683974443,0.6989654302597046,0.646352231502533,0.6716300845146179,0.3699421965317919,entailment,0.7890252470970154,192.68010926246643
-What causes high blood pressure?,"High blood pressure, also known as hypertension, can be caused by a variety of factors. Here are some of the main causes:
-1. Arteriosclerosis (hardening of the arteries): Over time, the inner lining of your blood vessels can become less flexible and more prone to buildup of plaque, which can narrow the passages and increase blood pressure.
-2. Poor diet: Consuming foods that are high in sodium, processed meats, and added sugars can contribute to high blood pressure.
-3. Lack of physical activity: Not getting enough exercise or being overweight or obese can increase your risk of developing hypertension.
-4. Smoking: Smoking can damage the inner lining of your blood vessels, leading to hypertension and increasing the risk of heart disease.
-5. Stress: Chronic stress can increase your blood pressure and contribute to other health problems.
-6. Sleep apnea: This condition, in which a person stops breathing for short periods during sleep, can lead to high blood pressure and other health issues.
-7. Underlying medical conditions: Certain medical conditions, such as kidney disease, ad","(BPH), a condition that affects men and is characterized
-by an enlarged prostate gland.
-High blood pressure
-High blood pressure puts a strain on the heart and
-the arteries. Over time, hypertension can damage the
-blood vessels to the point of causing stroke, heart fail-
-ure or kidney failure. People with high blood pressure
-may also be at higher risk for heart attacks. Controlling
-high blood pressure makes these problems less likely.
-Alpha blockers help lower blood pressure by causing health problems that high blood pressure can cause,
-patients may have to take medicine for the rest of their
-lives. Furthermore, medicine alone may not be enough.
-Patients with high blood pressure may also need to avoid
-certain foods and keep their weight under control. The
-health care professional who is treating the condition can
-offer advice on what measures may be necessary.
-Patients being treated for high blood pressure should not
-change their diets without consulting their physicians. heart and lungs.
-• Seek treatment for hypertension—High blood pressure
-can be controlled through lifestyle changes—reducing
-sodium and fat, exercising, managing stress, quitting
+question,response,context,bert_P,bert_R,bert_F1,faith_label,faith_score,chunk_P,chunk_R,chunk_F1,latency
+How do doctors know if someone has acute stress disorder?,"Doctors diagnose acute stress disorder based on a combination of the patient's history and physical examination to rule out other diseases that can cause anxiety. The doctor may ask questions about the patient's symptoms, such as when they started, how long they have lasted, and how they are affecting the patient's daily life. They may also perform a physical examination to check for any underlying medical conditions that could be contributing to the patient's anxiety. If the patient's symptoms are severe enough to interfere with normal life and have lasted longer than one month, the diagnosis may be changed to post-traumatic stress disorder (PTSD).","Anxiety symptoms connected with acute stress disor-
+der include irritability, physical restlessness, sleep prob-
+lems, inability to concentrate, and being easily startled.
+Diagnosis
+Diagnosis of acute stress disorder is based on a com-
+bination of the patient’s history and a physical examina-
+tion to rule out diseases that can cause anxiety. The
 KEY TERMS
-Arteriosclerosis —Hardening of the arteries. It
-includes atherosclerosis, but the two terms are
-often used synonymously.
-Cholesterol—A fat-like substance that is made by
-the human body and eaten in animal products.
-Cholesterol is used to form cell membranes and
-process hormones and vitamin D. High choles-",3.217928316489816,0.7056553959846497,0.6897179484367371,0.6975956559181213,0.38820638820638825,neutral,0.8007773756980896,177.10974407196045
-How is asthma diagnosed?,"Based on the context provided, asthma can be diagnosed through various methods, including:
-1. Skin prick test or blood test: These tests can determine if a person has an allergic reaction to certain allergens, which may contribute to asthma.
-2. Spirometry: This involves measuring how much air a person can exhale from their lungs and can help detect any narrowing of the airways.
-3. Methacholine challenge test: This test involves inhaling a small amount of methacholine, which can cause airway constriction in people with asthma. The test can help determine the severity of asthma and the effectiveness of treatment.","patients, and they may sometimes be the sole cause of
-symptoms. They are:
-GALE ENCYCLOPEDIA OF MEDICINE 2380
-Asthma
-GEM - 0001 to 0432 - A  10/22/03 1:43 PM  Page 380 GALE ENCYCLOPEDIA OF MEDICINE 2 379
-Asthma
-GEM - 0001 to 0432 - A  10/22/03 1:43 PM  Page 379 although an allergic skin response does not always mean
-that the allergen being tested is causing the asthma. Also,
-the body’s immune system produces antibody to fight off
-the allergen, and the amount of antibody can be mea-
-sured by a blood test. This will show how sensitive the
-patient is to a particular allergen. If the diagnosis is still
-in doubt, the patient can inhale a suspect allergen while
-using a spirometer to detect airway narrowing. Spirome-",1.567333389940286,0.7077844142913818,0.6283334493637085,0.6656966805458069,0.3652173913043478,neutral,0.7726927399635315,121.10133624076843
-What are the early signs of Alzheimer’s disease?,"Based on the provided context, the early signs of Alzheimer's disease include:
-* Memory loss that affects job skills or daily activities
-* Difficulty performing familiar tasks, such as cooking or managing finances
-* Problems with language, including trouble finding the right words or understanding what others are saying
-* Disorientation of time and place, such as forgetting the date or where they are
-* Poor or decreased judgment, leading to risky behavior or decisions
-* Difficulty with abstract thinking, such as problem-solving or decision-making
-* Misplacing things, including valuables or important documents.","severe problems with eating, communicating, and con-
-trolling their bladder and bowel functions.
-The Alzheimer’s Association has developed a list of ten
-warning signs of AD. A person with several of these symp-
-toms should see a physician for a thorough evaluation:
-• memory loss that affects job skills
-• difficulty performing familiar tasks
-• problems with language
-• disorientation of time and place
-• poor or decreased judgment
-• problems with abstract thinking
-• misplacing things Causes
-The cause or causes of Alzheimer’s disease are
-unknown. Some strong leads have been found through
-recent research, however, and these have also given some
-theoretical support to several new experimental treatments.
-GALE ENCYCLOPEDIA OF MEDICINE 2134
-Alzheimer’s disease
-GEM - 0001 to 0432 - A  10/22/03 1:42 PM  Page 134 GALE ENCYCLOPEDIA OF MEDICINE 2136
-Alzheimer’s disease
-GEM - 0001 to 0432 - A  10/22/03 1:42 PM  Page 136",5.492987840345735,0.6777099967002869,0.5877025723457336,0.6295052170753479,0.3305084745762712,entailment,0.5624399781227112,126.81941843032837
+Depersonalization —A dissociative symptom in
+which the patient feels that his or her body is unre-
+al, is changing, or is dissolving. onset of symptoms, immediate treatment, and appropriate
+social support. If the patient’s symptoms are severe
+enough to interfere with normal life and have lasted longer
+than one month, the diagnosis may be changed to PTSD.
+If the symptoms have lasted longer than one month but are
+GALE ENCYCLOPEDIA OF MEDICINE 2 49
+Acute stress disorder
+GEM - 0001 to 0432 - A  10/22/03 1:41 PM  Page 49 it might be just one isolated incident, or a string of prob-
+lems that wears the person down. The stress might be any-
+thing from a car accident or illness, to a divorce, or even a
+certain time of year (such as Christmas or summer).
+People with adjustment disorder may have a wide
+variety of symptoms. How those symptoms combine
+depend on the particular subtype of adjustment disorder
+and on the individual’s personality and psychological
+defenses. Symptoms normally include some (but not all)",0.7763354778289795,0.6509357690811157,0.7081267833709717,entailment,0.9125971794128418,0.6494870781898499,0.48253077268600464,0.5536971092224121,332.30743503570557
+Are there any natural ways to treat acute stress disorder?,"Based on the context you provided, here's the answer to your question:
+Yes, there are several natural ways to treat acute stress disorder. These include:
+
+1. Acupuncture: This involves inserting small needles into specific points on the body to help regulate the body's energy flow and reduce stress symptoms.
+2. Meditation and breathing exercises: Practicing mindfulness meditation or deep breathing techniques can help calm the mind and reduce stress levels.
+3. Yoga: This ancient practice combines physical movement with deep breathing and relaxation techniques, which can help reduce stress and promote overall well-being.
+4. Homeopathy: This involves using highly diluted natural substances to treat various health conditions, including acute stress disorder.
+5. Herbal medicine and flower essences: Certain herbs and plant extracts may have a calming effect on the body and help reduce stress symptoms.
+6. Self-care activities: Engaging in activities that promote relaxation and self-care, such as taking a warm bath, reading a book, or practicing yoga, can help reduce stress levels.
+7. Support groups","• The symptoms significantly interfere with normal
+social or vocational functioning
+• The symptoms last between two days and four weeks.
+Treatment
+Treatment for acute stress disorder usually includes
+a combination of antidepressant medications and short-
+term psychotherapy.
+Alternative treatment
+Acupuncture has been recommended as a treatment
+for acute stress disorder. Some other alternative
+approaches, including meditation , breathing exercises, and yoga, may be helpful when combined with short-
+term psychotherapy. Homeopathic treatment and the use
+of herbal medicine and flower essences also can help the
+person with acute stress disorder rebalance on the physi-
+cal, mental, and emotional levels.
+Prognosis
+The prognosis for recovery is influenced by the sever-
+ity and duration of the trauma, the patient’s closeness to it,
+and the patient’s previous level of functioning. Favorable
+signs include a short time period between the trauma and • understand how the stressor has affected their lives
+• develop alternate social or recreational activities
+Family or couples therapy may be helpful in some
+cases. Medications are not usually used to treat adjust-
+ment disorders, although sometimes a few days or weeks
+of an anti-anxiety drug can control anxiety or sleeping
+problems.
+Self-help groups aimed at a specific problem (such
+as recovering from divorce or job loss) can be extremely",0.6902931332588196,0.6733782887458801,0.6817308068275452,neutral,0.9015449285507202,0.6697865724563599,0.5147146582603455,0.5820998549461365,305.38417315483093
+My child was stung by a bee and is vomiting. What should I do?,"As a helpful medical assistant, I would advise you to seek immediate medical attention for your child if they have been stung by a bee and are experiencing vomiting. It's important to check for any signs of an allergic reaction, such as difficulty breathing, rapid heartbeat, or swelling of the face, lips, tongue, or throat. If you notice any of these signs, call emergency services immediately. In the meantime, administer an EpiPen if you have one available, and provide your child with a antihistamine such as diphenhydramine or chlorpheniramel to help alleviate symptoms. Additionally, you can use a topical cream or lotion containing hydrocortisone to reduce swelling and itching. However, if your child's symptoms worsen or they experience any difficulty breathing, seek medical attention right away.","sue fluid), nausea and vomiting, dizziness, muscle and
+joint pain, and a rash.
+BEES AND WASPS. The familiar symptoms of bee
+and wasp stings include pain, redness, swelling, and itch-
+iness in the area of the sting. Multiple stings can have
+much more severe consequences, such as anaphylaxis,a
+life-threatening allergic reaction that occurs in hypersen-
+sitive persons.
+Snakes
+Venomous pit viper bites usually begin to swell
+within 10 minutes and sometimes are painful. Other ications, oral antihistamines, and calamine lotion are
+good for treating minor symptoms. Putting meat tender-
+izer on the wound has no effect.
+Persons who have been stung and experience an
+allergic reaction, or who are at risk due to their medical
+history, require immediate medical attention. The danger
+signs, which usually begin 10 minutes after an individual
+is stung (though possibly not for several hours), include
+nausea, faintness, chest pain, abdominal cramps, diar- bee or wasp sting normally fade away after a few hours.
+People who are allergic to such stings, however, can
+experience severe and occasionally fatal anaphylaxis.
+Snakes
+A snakebite victim’s chances of survival are excel-
+lent if medical aid is obtained in time. Some bites, how-
+ever, result in amputation, permanent deformity, or loss
+of function in the injured area.
+Marine animals
+STINGRAYS. Stingray venom kills its human victims
+on rare occasions.
+Prevention
+Mammals",0.6872785687446594,0.6448364853858948,0.6653813719749451,neutral,0.8888194561004639,0.6483778953552246,0.5445137023925781,0.5919241309165955,228.60954976081848
+Which spider bite may cause tissue death?,"Answer: The brown spider bite can cause tissue death, leading to necrotic arachni-dism, which can take months or years to disappear.","A brown spider’s bite can lead to necrotic arachni-
+dism, in which the tissue in an area of up to several inch-
+es around the bite becomes necrotic (dies), producing an
+open sore that can take months or years to disappear. In
+most cases, however, the bite simply produces a hard,
+painful, itchy, and discolored area that heals without
+treatment in 2-3 days. The bite may also be accompanied
+by a fever, chills, edema (an accumulation of excess tis- bites can be fatal if neglected. Surgery and hospitaliza-
+tion may be needed for severe bites.
+Arthropods
+SPIDERS. Even without treatment, adults usually
+recover from black widow bites after 2-3 days. Those
+most at risk of dying are very young children, the elderly,
+and people with high blood pressure. In the case of
+brown spider bites, the risk of death is greatest for chil-
+dren, though rare.
+BEES AND WASPS. The pain and other symptoms of a sickness, an inflammatory response that can give rise to
+joint pain, a fever, rashes, and other unpleasant, though
+rarely serious, consequences.
+An antivenin for brown spider bites exists as well,
+but it is not yet available in the United States. The drug
+dapsone, used to treat leprosy, can sometimes stop the
+tissue death associated with a brown spider bite. Necrot-
+ic areas may need debridement (removal of dead and
+damaged tissue) and skin grafts. Pain medications, anti-",0.8074883222579956,0.6211633086204529,0.7021756172180176,entailment,0.8082959055900574,0.6670589447021484,0.5231022834777832,0.5863744020462036,125.50942730903625
+How do you treat a minor dog bite at home?,"Thank you for your question! If you've recently experienced a minor dog bite, there are some basic steps you can take at home to treat the wound and help prevent infection. Here are some guidelines from the American Academy of Family Physicians:
+1. Gently wash the wound with soap and water to remove any dirt or debris that may be obstructing the healing process.
+2. Apply pressure to the injured area with a clean towel to stop the bleeding.
+3. Apply antibiotic ointment and a sterile bandage to the wound to help prevent infection and promote healing.
+4. Elevate the injured limb above the level of your heart to reduce swelling and fend off infection.
+5. Clean and cover the wound with ointment twice a day until it heals.
+It's important to note that if you experience any signs of infection, such as increased redness, swelling, or discharge, seek medical attention immediately. Additionally, if you have not had a tetanus shot in the past five years or have any other underlying medical conditions that may increase your susceptibility","victim, information about the circumstances of the bite,
+and a look at the snake itself (if it can safely be killed and
+brought in for identification). Blood tests and urinalysis
+supply important data on the victim’s condition. Chest x-
+rays and electrocardiography (a procedure for measur-
+ing heart activity) may also be necessary.
+Treatment
+Mammals
+DOGS. Minor dog bites can be treated at home. The
+American Academy of Family Physicians recommends gently washing the wound with soap and water and then
+applying pressure to the injured area with a clean towel
+to stop the bleeding. The next step is to apply antibiotic
+ointment and a sterile bandage to the wound. To reduce
+swelling and fend off infection, ice should be applied and
+the injured area kept elevated above the level of the heart.
+The wound should be cleaned and covered with ointment
+twice a day until it heals.
+Any dog bite that does not stop bleeding after 15 cancer, individuals who have not had a tetanus shot in
+five years, and anyone else who has a medical problem
+that can increase susceptibility to infection should seek
+medical treatment no matter how minor the bite appears.
+Medical treatment of dog bites involves washing the
+wound with an anti-infective solution. Removal of dead
+and damaged tissue (under local, regional, or general
+anesthetic) may be required after the wound has been
+washed, and any person whose tetanus shots are not up to",0.7625771164894104,0.735928475856781,0.7490158677101135,neutral,0.9357359409332275,0.6363558769226074,0.5052471160888672,0.5632728338241577,241.73411297798157
+Why is zolpidem (Ambien) not recommended for use on airplane flights shorter than seven to eight hours?,"Zolpidem, commonly known as Ambien, is not recommended for use on airplane flights shorter than seven to eight hours because it can cause drowsiness and impair cognitive function. These effects can be dangerous when operating a vehicle or flying an aircraft, especially if the person taking the drug is not fully aware of their surroundings. Additionally, the drug's effects may last longer than expected on an airplane flight, making it difficult for the individual to stay alert and focused during the journey. To avoid any potential risks, it is recommended to avoid taking zolpidem on flights that are shorter than seven to eight hours.","they take the medicine and the time its effects wear off.
+This is usually not a problem, because people go to sleep
+right after taking the medicine and stay asleep until its
+effects wear off. But it could be a problem for anyone
+who has to wake up before getting a full night’s sleep
+(seven to eight hours). In particular, travelers should not
+take this medicine on airplane flights of less than seven
+to eight hours.
+Because zolpidem works work on the central ner- or coma.
+Zolpidem may be taken with food or on an empty
+stomach, but it may work faster when taken on an empty
+stomach. Check with a physician or pharmacists for
+instructions on how to take the medicine.
+Precautions
+Zolpidem is meant only for short-term treatment of
+insomnia. If sleep problems last more than seven to 10
+days, check with a physician. Longer-lasting sleep prob-
+lems could be a sign of another medical problem. Also,
+this drug may lose its effectiveness when taken every Description
+The anti-insomnia drug described here, zolpidem
+(Ambien), is a classified as a central nervous system
+(CNS) depressant. CNS depressants are medicines that
+slow the nervous system. Physicians also prescribe medi-
+cines in the benzodiazepine family, such as flurazepam
+(Dalmane), quazepam (Doral), triazolam (Halcion), esta-
+zolam (ProSom), and temazepam (Restoril), for insom-
+nia. Benzodiazepine drugs are described in the essay on
+antianxiety drugs . Zaleplon (Sonata) is another anti-",0.7138184309005737,0.6362344026565552,0.6727971434593201,entailment,0.8361326456069946,0.7072831392288208,0.5496416687965393,0.6185768246650696,159.54489469528198
+What is the main use of hydroxyzine?,"Based on the provided context, the main use of hydroxyzine is to relieve itching caused by allergies.","mine whether it is still needed.
+Hydroxyzine may add to the effects of alcohol and
+other drugs that slow down the central nervous system,
+such as other antihistamines, cold medicine, allergy medi-
+cine, sleep aids, medicine for seizures, tranquilizers, some
+pain relievers, and muscle relaxants . Anyone taking
+hydroxyzine should not drink alcohol and should check
+with his or her physician before taking any of the above.
+Some people feel drowsy or less alert when using injection to relieve itching.
+Purpose
+The medicine described here, hydroxyzine, is a type
+of antihistamine used to relieve itching caused by allergic
+GALE ENCYCLOPEDIA OF MEDICINE 2284
+Anti-itch drugs
+GEM - 0001 to 0432 - A  10/22/03 1:42 PM  Page 284 have not been fully studied, physicians advise against
+taking it in early pregnancy.
+BREASTFEEDING. Women who are breastfeeding
+should also check with their physicians before using
+hydroxyzine. The medicine may pass into breast milk
+and may cause problems in nursing babies whose moth-
+ers take it.
+Side effects
+The most common side effect, drowsiness, usually
+goes away as the body adjusts to the drug. If it does not,
+reducing the dosage may be necessary. Other side",0.7369605302810669,0.5654788613319397,0.6399308443069458,neutral,0.9292188882827759,0.6981715559959412,0.4928452670574188,0.577809751033783,126.35435771942139
+What is an aura in migraines?,"An aura in migraines refers to seeing patterns of flashing lights, often experienced by individuals before a migraine attack.","seeing patterns of flashing lights. This set of signals is
+called an aura. The antimigraine drugs discussed in this
+section are meant to be taken as soon as the pain begins,
+to relieve the pain and other symptoms. Other types of
+drugs, such as antiseizure medicines, antidepressants,
+calcium channel blockers and beta blockers, are some-
+times prescribed to prevent attacks in people with very
+severe or frequent migraines.
+Description
+Migraine is thought to be caused by electrical and flashing lights, that some people have 10-30 min-
+utes before a migraine attack.
+Inflammation —Pain, redness, swelling, and heat
+that usually develop in response to injury or illness.
+Treatment You Need. New York, NY: The Guilford Press,
+1995.
+ORGANIZATIONS
+American Council for Headache Education (ACHE). 19 Man-
+tua Road, Mt. Royal, NJ 08061. (800) 255-2243. <http://
+www.achenet.org>.
+National Headache Foundation. 428 W. St. James Place, Chica-
+go, IL 60614. (800) 843-2256. <http://www.head Purpose
+Migraine headaches usually cause a throbbing pain
+on one side of the head. Nausea, vomiting, dizziness ,
+increased sensitivity to light and sound, and other symp-
+toms may accompany the pain. The attacks may last for
+several hours or for a day or more and may come as often
+as several times a week. Some people who get migraine
+headaches have warning signals before the headaches
+begin, such as restlessness, tingling in an arm or leg, or",0.7660207748413086,0.547473132610321,0.6385652422904968,entailment,0.9045748114585876,0.6562806963920593,0.4694216251373291,0.5473424792289734,136.75862383842468
+Why avoid taking triptans within 24 hours of ergotamine?,"The interaction between triptans (Sumatriptan, Naratriptan, Riza-triptan, and Zolmitriptan) and ergotamine can cause serious problems. Taking these medications together can lead to increased blood vessel constriction in the brain and other parts of the body, which can cause a range of adverse effects, including:
+1. Lightheadedness or dizziness: The combination of these two drugs can cause a significant drop in blood pressure, leading to lightheadedness or dizziness.
+2. Heart palpitations: The combined effect of the triptans and ergotamine on blood vessels can also cause irregular heartbeats or palpitations.
+3. Fainting: With further decreases in blood pressure, there is a risk of fainting or feeling dizzy, especially when standing up suddenly.
+4. Other adverse effects: Taking triptans and ergotamine together can also cause other adverse effects such as headache, nausea, vomiting, and abdominal pain.
+To avoid these potential adverse effects, the drug interaction alert in the context states that triptans should not","Sumatriptan (Imitrex), naratriptan (Amerge), riza-
+triptan (Maxalt) and zolmitriptan (Zomig) may interact
+with ergotamine. These drugs should not be taken within
+24 hours of taking any drug containing ergotamine.
+Some antimigraine drugs work by tightening blood
+vessels in the brain. Because these drugs also affect
+blood vessels in other parts of the body, people with
+coronary heart disease, circulatory problems, or high
+blood pressure should not take these medicines unless response, the dose may be repeated once after four hours,
+for a maximum dose of 5 mg in a 24-hour period. Larger
+doses do not seem to offer any benefit.
+Sumatriptan
+Take as soon as pain or other migraine symptoms
+begin. Also effective if taken any time during an attack.
+Do not take the drug until the pain actually starts as not
+all auras result in a migraine.
+TABLETS. Usual dose is one 25-mg tablet, taken with
+water or other liquid.
+Doses should be spaced at least two hours apart. lightheadedness, heart palpitations, and fainting. Activ-
+ities such as driving, using machines, or doing anything
+else that might be dangerous for 24 hours after taking the
+first dose should be avoided. Patients should be reminded
+to be especially careful not to fall when getting up in the
+middle of the night. The same precautions are recom-
+mended if the dosage is increased or if the drug has been
+stopped and then started again. Anyone whose safety on",0.7070626616477966,0.673006534576416,0.6896143555641174,neutral,0.6673269271850586,0.7134423851966858,0.5274469256401062,0.6065053343772888,289.05879735946655
+What are common causes of bladder stones?,"Common causes of bladder stones include urinary tract infections (UTIs), obstruction of the urinary tract, enlargement of the prostate gland in men, and the presence of foreign bodies in the urinary tract. Additionally, diet and fluid intake may also play a role in the development of bladder stones.","grow to more than an inch in diameter. These stones can
+block the flow of urine causing pain and difficulty with
+urination. They can also scratch the bladder wall, which
+may lead to bleeding or infection.
+Causes and symptoms
+While the exact causes of the formation of bladder
+stones are not completely understood, bladder stones
+usually occur because of urinary tract infection (UTI),
+obstruction of the urinary tract, enlargement of the
+prostate gland in men, or the presence of foreign bodies the urinary tract becomes obstructed by the stone. These
+symptoms include:
+• abnormally dark colored urine
+• blood in the urine
+• difficulty urinating
+• frequent urge to urinate
+• lower abdominal pain
+• pain or discomfort in the penis
+Some people with bladder stones also may experi-
+ence an inability to control urination ( urinary inconti-
+nence).
+Diagnosis
+The diagnosis of bladder stones is usually made after a
+physical examination, which may include a rectal exami- in the urinary tract. Diet and the amount of fluid intake
+also appear to be important factors in the development of
+bladder stones.
+Ninety-five percent of all bladder stones occur in
+men, most of who have an enlarged prostate gland or a
+UTI. These stones are rarely seen in children or in
+African Americans. People with gout may develop blad-
+der stones composed almost entirely of uric acid.
+The symptoms of bladder stones may become evi-
+dent when the wall of the bladder is scratched or when",0.8284013271331787,0.6902883052825928,0.7530646920204163,entailment,0.8491489291191101,0.6794754266738892,0.5431469082832336,0.6037104725837708,219.68634414672852

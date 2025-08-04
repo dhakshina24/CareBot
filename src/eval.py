@@ -17,14 +17,12 @@ import pandas as pd
 
 class RAGEval:
   """"Metric Functions for Evaluation of RAG Pipeline"""
-  def __init__(self, candidates="", references=""):
+  def __init__(self, question, candidates="", references=""):
+    self.question = question
     self.candidates = [candidates]
     self.references = [references]
 
-  def evaluate_bleu(self):
-      bleu_score = corpus_bleu(self.candidates, [self.references]).score
-      return bleu_score
-  
+  # Evaluate Similarity betweeen context and response 
   def evaluate_bert_score(self):
      try: 
        P, R, F1 = score(self.candidates, self.references, lang="en", model_type='bert-base-multilingual-cased')
@@ -32,40 +30,57 @@ class RAGEval:
      
      except RuntimeError as e:
         print('BERTScore could not be computed due to memory constraints.')
-  
-  def evaluate_rouge(self):
-     scorer = rouge_scorer.RougeScorer(['rouge1'], use_stemmer=True)
-     rouge_scores = [scorer.score(ref, cand) for ref, cand in zip(self.references, self.candidates)]
-     rouge1 = sum([score['rouge1'].fmeasure for score in rouge_scores]) / len(rouge_scores)
-     return rouge1
-  
+        return None
 
+  # Evaluate if response entails context
   def evaluate_faithfulness(self):
-      nli = pipeline("text-classification", model="facebook/bart-large-mnli")
-      input_text = f"premise: {self.references} hypothesis: {self.candidates}"
-      faithfulness = nli(input_text)
-      return faithfulness[0]["label"], faithfulness[0]["score"]
+      try:
+          # Use a pre-trained NLI model to evaluate faithfulness
+          nli = pipeline("text-classification", model="facebook/bart-large-mnli")
+          input_text = f"premise: {self.references} hypothesis: {self.candidates}"
+          faithfulness = nli(input_text)
+          return faithfulness[0]["label"], faithfulness[0]["score"]
 
+      except Exception as e:
+          print('Faithfulness could not be computed.')
+          return None
+
+  # Evaluate Similarity betweeen context and query 
+  def evaluate_chunk_relevance(self):
+     try: 
+       P, R, F1 = score([self.question], self.references, lang="en", model_type='bert-base-multilingual-cased')
+       return P.mean().item(), R.mean().item(), F1.mean().item()
+     
+     except RuntimeError as e:
+        print('BERTScore could not be computed due to memory constraints.')
+        return None
 
 def build_rag_pipeline():
    """ Function to build RAG Pipeline"""
+
+   # Setting up environment variables
+   # Load environment variables from .env file
    load_dotenv()
    PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
    HUGGINGFACE_API_KEY = os.getenv("HUGGINGFACE_API_KEY")
    os.environ["PINECONE_API_KEY"] = PINECONE_API_KEY
    os.environ["HUGGINGFACE_API_KEY"] = HUGGINGFACE_API_KEY
+
+   # Check if the API keys are set
+   if not PINECONE_API_KEY or not HUGGINGFACE_API_KEY:
+      raise ValueError("PINECONE_API_KEY and HUGGINGFACE_API_KEY must be set in the .env file.")
    
 
    # Generate embeddings for the text chunks
-  #  embedding_start  = time.time()
+   embedding_start  = time.time()
    embedding = download_embeddings()
    print("Embedding Model Downloaded")
-  #  embedding_end = time.time()
-  #  print("Embedding Time:", embedding_end - embedding_start)
+   embedding_end = time.time()
+   print("Embedding Time:", embedding_end - embedding_start)
    
    
    # Initialize Pinecone client
-  #  db_start = time.time()
+   db_start = time.time()
    pc = Pinecone(api_key = PINECONE_API_KEY)
    # Connect to the index
    index_name = 'medical-chatbot'
@@ -82,15 +97,15 @@ def build_rag_pipeline():
    
    # Define retriever for retrieving docs from VectorDB
    retriever = docsearch.as_retriever(search_type='similarity', search_kwargs={'k': 3})
-  #  db_end = time.time()
-  #  print("Pinecone Initialization and Vector DB setup", db_end - db_start)
+   db_end = time.time()
+   print("Pinecone Initialization and Vector DB setup", db_end - db_start)
    
    # Define LLM - Quantized Llama-2
    model_start = time.time()
-   config = {'max_new_tokens': 256, 'context_length': 1024, 'temperature': 0.8, 'threads': 4}
+   config = {'max_new_tokens': 256, 'context_length': 1024, 'temperature': 0.7, 'threads': 4}
    llm = CTransformers(model= "../models/llama-2-7b-chat.Q3_K_S.gguf", model_file="llama-2-7b-chat.Q3_K_S.gguf", model_type="llama", config=config)
-  #  model_end = time.time()
-  #  print("Time taken to load LLM:", model_end - model_start)
+   model_end = time.time()
+   print("Time taken to load LLM:", model_end - model_start)
    
    # Prompt Template
    prompt = ChatPromptTemplate.from_messages(
@@ -114,10 +129,9 @@ def evaluate_question(question, rag_chain):
   reference = " ".join([doc.page_content for doc in rag_response['context']])
 
   # Evaluate RAG
-  evaluator = RAGEval(response, reference)
-  bleu = evaluator.evaluate_bleu()
+  evaluator = RAGEval(question, response, reference)
   P, R, F1 = evaluator.evaluate_bert_score()
-  rouge = evaluator.evaluate_rouge()
+  P_chunk, R_chunk, F1_chunk = evaluator.evaluate_chunk_relevance()
   faith_label, faith_score = evaluator.evaluate_faithfulness()
   response_end = time.time()
 
@@ -125,13 +139,14 @@ def evaluate_question(question, rag_chain):
      "question": question, 
      "response": response, 
      "context": reference, 
-     "BLUE": bleu, 
      "bert_P": P, 
      "bert_R": R, 
      "bert_F1": F1, 
-     "rouge1": rouge, 
      "faith_label": faith_label,  
-     "faith_score": faith_score,  
+     "faith_score": faith_score, 
+     "chunk_P": P_chunk,
+     "chunk_R": R_chunk,
+     "chunk_F1": F1_chunk, 
      "latency":  response_end - response_start,
 
   }
@@ -142,11 +157,16 @@ if __name__ == '__main__':
   rag_chain = build_rag_pipeline()
 
   questions = [
-        "What is Acne?",
-        "What are the symptoms of diabetes?",
-        "What causes high blood pressure?",
-        "How is asthma diagnosed?",
-        "What are the early signs of Alzheimer’s disease?"
+        "How do doctors know if someone has acute stress disorder?",
+        "Are there any natural ways to treat acute stress disorder?",
+        "My child was stung by a bee and is vomiting. What should I do?",
+        "Which spider bite may cause tissue death?",
+        "How do you treat a minor dog bite at home?", 
+        "Why is zolpidem (Ambien) not recommended for use on airplane flights shorter than seven to eight hours?",
+        "What is the main use of hydroxyzine?", 
+        "What is an aura in migraines?",
+        "Why avoid taking triptans within 24 hours of ergotamine?", 
+        "What are common causes of bladder stones?"
   ]
 
   results = []
