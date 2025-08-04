@@ -22,6 +22,10 @@ HUGGINGFACE_API_KEY = os.getenv("HUGGINGFACE_API_KEY")
 os.environ["PINECONE_API_KEY"] = PINECONE_API_KEY
 os.environ["HUGGINGFACE_API_KEY"] = HUGGINGFACE_API_KEY
 
+# Check if the API keys are set
+if not PINECONE_API_KEY or not HUGGINGFACE_API_KEY:
+  raise ValueError("PINECONE_API_KEY and HUGGINGFACE_API_KEY must be set in the .env file.")
+
 # Generate embeddings for the text chunks
 embedding = download_embeddings()
 print("Embedding Model Downloaded")
