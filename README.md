@@ -10,6 +10,10 @@ CareBot is a Retrieval-Augmented Generation (RAG) chatbot designed to answer med
 - Streamlit: Frontend UI
 
 
+## Data Source
+This chatbot uses content from the **Gale Encyclopedia of Medicine** as its knowledge base. 
+
+
 ## Key Features 
 - Scalable Vector Search using Pinecone
 - Lightweight system with quantized Llama - 2 model 
@@ -47,13 +51,15 @@ pip install -r requirements.txt
 
 3. Set up API keys in .env file (Pinecone and HuggingFace).
 
-4. Run Backend
+4. Download the quantized LLaMA-2 model from HuggingFace: [TheBloke/Llama-2-13B-GGUF](https://huggingface.co/TheBloke/Llama-2-13B-GGUF)
+
+5. Run Backend
 ```
 cd src/backend
 python backend.py
 ```
 
-5. Run Streamlit App
+6. Run Streamlit App
 ```
 cd src/frontend
 streamlit run app.py
